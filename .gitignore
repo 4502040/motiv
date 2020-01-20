@@ -1,2 +1,6 @@
 .env
 /.env
+storage/cms/cache
+storage/cms/twig
+storage/framework
+storage/app/uploads/public
