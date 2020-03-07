@@ -179,4 +179,7 @@
   'RainLab\\Blog\\Components\\Categories' => 'plugins/rainlab/blog/components/Categories.php',
   'RainLab\\Blog\\Components\\RssFeed' => 'plugins/rainlab/blog/components/RssFeed.php',
   'RainLab\\Blog\\Models\\Settings' => 'plugins/rainlab/blog/models/Settings.php',
+  'indikator\\news\\Plugin' => 'plugins\\indikator\\news\\Plugin.php',
+  'saurabhdhariwal\\comments\\Plugin' => 'plugins\\saurabhdhariwal\\comments\\Plugin.php',
+  'Indikator\\News\\Controllers\\Posts' => 'plugins\\indikator\\news\\controllers\\Posts.php',
 );
