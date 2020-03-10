@@ -5,3 +5,4 @@ storage/cms/twig
 storage/framework
 storage/app/uploads/public
 storage/framework/cache
+storage/framework/cache/
