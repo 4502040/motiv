@@ -8,7 +8,51 @@ slug = "{{ :slug }}"
 categoryPage = 404
 
 [commentsPost]
+
+[vote]
+poll = 1
+
+[yandexShare]
+bare = 0
+counter = 0
+copy = "last"
+direction = "horizontal"
+popup_direction = "bottom"
+popup_position = "inner"
+lang = "ru"
+size = "s"
+collections = 0
+vkontakte = 1
+facebook = 1
+odnoklassniki = 0
+moimir = 0
+gplus = 1
+pinterest = 0
+twitter = 1
+blogger = 0
+delicious = 0
+digg = 0
+reddit = 0
+evernote = 0
+linkedin = 0
+lj = 0
+pocket = 0
+qzone = 0
+renren = 0
+sinaWeibo = 0
+surfingbird = 0
+tencentWeibo = 0
+tumblr = 0
+viber = 0
+whatsapp = 1
+skype = 0
+telegram = 1
 ==
 {% component 'blogPost' %}
+
+{% component 'yandexShare' %}
+<br>
+
+{% component 'vote' %}
 
 {% component 'commentsPost' %}

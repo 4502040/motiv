@@ -56,7 +56,7 @@ class Post extends ComponentBase
 
         $post = $post->isPublished()->first();
 
-        if(!$post) {
+        if (!$post) {
             return $post;
         }
         $post->tags = explode(',', $post->tags);
@@ -66,9 +66,24 @@ class Post extends ComponentBase
             $meta_description = substr($meta_description, 0, 252).'...';
         }
 
+        $post->setUrl($this->postPage, $this->controller);
+
+        // General SEO Tags
         $this->page->title = $post->title;
         $this->page->meta_title = $post->title;
         $this->page->meta_description = $meta_description;
+        $this->page->meta_canonical = $post->url;
+        $this->page->meta_image_src = $post->image;
+
+        // Create keyword list, from category name and tag list.
+        $post_keywords = $post->category->name.', ';
+        foreach ($post->tags as $key => $tag) {
+            $post_keywords .= $tag;
+            if ($key != (count($post->tags) - 1)) {
+                $post_keywords .= ', ';
+            }
+        }
+        $this->page->meta_keywords = $post_keywords;
 
         return $post;
     }
